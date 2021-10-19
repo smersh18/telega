@@ -30,18 +30,8 @@ function parseData(input) {
 
     // TODO
     // process compute power
-    const computeMatch = inputLine.match(/\s+(\d+\.*\d\s*\w+\/\w)/i)
-    if (!computeMatch || !computeMatch[1])
-        return []
-
-    foundItem.compute = computeMatch[1]
-
-    const priceMatch = inputLine.match(/\s+(\d+)$/i)
-    if (!priceMatch || !priceMatch[1])
-         return []
-
-    foundItem.price = priceMatch[1]
-
+    foundItem.compute = "0 Th/s"
+    foundItem.price = "0 RUB"
 
     return foundItem;
 }
@@ -57,4 +47,3 @@ for (const line of lines) {
 }
 
 console.log(parsed.flat())
-
