@@ -40,7 +40,7 @@ function parseData(input) {
     if (!priceMatch || !priceMatch[1])
          return []
 
-    foundItem.price = priceMatch[1]
+    foundItem.price = priceMatch[1] + " RUB"
 
 
     return foundItem;
